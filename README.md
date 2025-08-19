@@ -28,7 +28,7 @@ A classic Tic-Tac-Toe game built with modern features using HTML, CSS, and vanil
 
 ## 🚀 Live Demo
 
-**[View the live game here!](https://suresh-datt-joshi.github.io/tic-tac-toe_game/)**
+**[View the live game here!](tic-tac-toe-game-steel-gamma.vercel.app)**
 
 ---
 
