@@ -5,10 +5,12 @@
 You can run the game by simply opening the `index.html` file in any modern browser.
 
 ## 📁 Project Structure
-tic-tac-toe/ <br />
-├── index.html # HTML structure of the game<br />
-├── style.css # Styling and layout<br />
-├── app.js # Game logic and interactions<br />
+
+tic-tac-toe/  
+├── 📄 index.html   # HTML structure of the game  
+├── 🎨 style.css    # Styling and layout  
+└── ⚙️ app.js       # Game logic and interactions  
+
 
 
 ## 🚀 Features
@@ -44,7 +46,7 @@ tic-tac-toe/ <br />
 
 1. Clone the repository:
 
-   git clone https://github.com/1-suresh/tic-tac-toe.git
+   git clone https://github.com/suresh-datt-joshi/tic-tac-toe.git
    
 2. Navigate into the folder:
    
