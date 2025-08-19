@@ -1,55 +1,114 @@
-# tic-tac-toe
-🕹️ A simple web-based Tic Tac Toe game built using HTML, CSS, and JavaScript. This project allows two players to play Tic Tac Toe on the same device. It demonstrates basic front-end development concepts including DOM manipulation, event handling, and responsive design.
+# Tic-Tac-Toe_Game
 
-## 🖥️ Live Demo
-You can run the game by simply opening the `index.html` file in any modern browser.
+A classic Tic-Tac-Toe game built with modern features using HTML, CSS, and vanilla JavaScript. This project goes beyond a simple implementation by including multiple game modes, a challenging AI with varying difficulty levels, and a polished, user-friendly interface.
 
-## 📁 Project Structure
+![Tic-Tac-Toe Gameplay Screenshot](https://github.com/user-attachments/assets/be9ae95e-a4c4-445c-85ed-1f7ad47d4b42)
 
-tic-tac-toe/  
-├── 📄 index.html   # HTML structure of the game  
-├── 🎨 style.css    # Styling and layout  
-└── ⚙️ app.js       # Game logic and interactions  
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+  <p align="center">
+    <em>Mode and Difficulty Selection</em>
+    <br>
+    <img src="https://github.com/user-attachments/assets/54fabfe2-2aab-4627-a610-48861eef4986" width="48%">
+    <img src="https://github.com/user-attachments/assets/d450d7e5-8107-443c-a9b6-9b9469a4ab0b" width="48%">
+    <br><br>
+    <em>Gameplay in Dark and Light Themes</em>
+    <br>
+    <img src="https://github.com/user-attachments/assets/683b3ca7-168b-4529-8526-7cd72d13612a" width="48%">
+    <img src="https://github.com/user-attachments/assets/52d0c0e9-3191-4dd3-9117-9559bb6341bc" width="48%">
+    <br><br>
+    <em>Victory Screen</em>
+    <br>
+    <img src="https://github.com/user-attachments/assets/e21095d5-7c96-4dd7-ab1e-e72eb826c4cf" width="70%">
+  </p>
+</details>
 
+---
 
+## 🚀 Live Demo
 
-## 🚀 Features
+**[View the live game here!](https://suresh-datt-joshi.github.io/tic-tac-toe_game/)**
 
-- Two-player game (Player X and Player O)
-- Win/draw detection based on board state
-- Reset and New Game options
-- Visual game board with responsive styling
-- Congratulatory message on winning
+---
 
-## 🧠 Game Logic
+## ✨ Features
 
-- The game uses a 3x3 grid of buttons.
-- JavaScript tracks turns and checks win conditions using predefined winning patterns.
-- Once a player wins, the board disables and shows a winner message.
-- Reset buttons allow players to start fresh.
+This project is packed with features to create a complete and enjoyable user experience:
 
-## 💻 Technologies Used
+* **Game Mode Selection:**
+    * **Player vs. Player:** Play against a friend on the same device.
+    * **Player vs. Computer:** Challenge a smart AI opponent.
 
-- HTML5 
-- CSS3 (Flexbox, responsive units)
-- Vanilla JavaScript (DOM manipulation, event handling)
+* **AI with Multiple Difficulties:**
+    * **Easy:** The AI makes random moves.
+    * **Medium:** The AI will try to win and block the player's winning moves.
+    * **Hard:** An unbeatable AI that uses the **minimax algorithm** to calculate the best possible move every turn.
 
-## 📸 Screenshot
+* **Customizable Player Names:** In Player vs. Player mode, users can enter their names, which are displayed on the scoreboard and in win messages.
 
-<img width="1022" height="870" alt="Screenshot 2025-08-01 194908" src="https://github.com/user-attachments/assets/3edf2b8f-0776-4db9-b244-94d082fdbc9b" />
+* **Interactive UI & UX:**
+    * **Theme Switcher:** Toggle between a sleek dark mode and a clean light mode. The user's preference is saved in their browser.
+    * **Sound Controls:** A mute button to toggle all game sounds on or off. This preference is also saved.
+    * **Animated Loader:** A smooth loading animation on the initial page load.
+    * **Responsive Design:** The game looks and works great on all devices, from mobile phones to desktops.
 
-<img width="1014" height="842" alt="Screenshot 2025-08-01 194957" src="https://github.com/user-attachments/assets/0bc5de81-35aa-40c7-9bad-2257cbf9d55d" />
+* **Engaging Gameplay:**
+    * **Score Tracking:** The scoreboard keeps track of wins for the current session.
+    * **Sound Effects:** Audio feedback for clicks, wins, and draws (using external audio files).
+    * **Visual Feedback:** The winning line of three is highlighted at the end of each round.
 
-<img width="971" height="855" alt="Screenshot 2025-08-01 195014" src="https://github.com/user-attachments/assets/71cccd38-6cd8-4d75-b7e0-925acfa5f909" />
+---
 
-## 📌 How to Run
+## 🛠️ Technologies Used
 
-1. Clone the repository:
+This project was built using fundamental web technologies, with a focus on clean and well-structured vanilla code.
 
-   git clone https://github.com/suresh-datt-joshi/tic-tac-toe.git
-   
-2. Navigate into the folder:
-   
-   cd tic-tac-toe
-   
-4. Open index.html in a web browser.
+* **HTML5:** For the structure and content of the game.
+* **CSS3:** For all styling, including themes, animations, and responsive design. Uses modern features like Flexbox, Grid, and CSS Variables.
+* **JavaScript (ES6+):** For all game logic, including the AI, state management, and DOM manipulation.
+
+---
+
+## 🎮 How to Play
+
+1.  **Choose a Game Mode:** Select either "Player vs Player" or "Player vs Computer".
+2.  **Set Up Your Game:**
+    * If you chose **Player vs Player**, enter the names for Player O and Player X.
+    * If you chose **Player vs Computer**, select a difficulty level (Easy, Medium, or Hard).
+3.  **Play the Game:** Players take turns clicking on an empty square to place their mark ('O' or 'X').
+4.  **Win or Draw:** The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the round. If all squares are filled and no one has won, the game is a draw.
+5.  **Play Again:** After a round ends, click "Play Again" to start a new round with the same settings, or "Main Menu" to choose a new mode.
+
+---
+
+## 📂 How to Run Locally
+
+To run this project on your local machine, follow these simple steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/suresh-datt-joshi/tic-tac-toe_game.git]
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd tic-tac-toe_game
+    ```
+
+3.  **Open `index.html` in your browser:**
+    * You can simply double-click the `index.html` file, or right-click and choose "Open with" your preferred browser.
+
+And that's it! The game will be running locally.
+
+---
+
+## ✍️ Author
+
+* **Suresh Datt Joshi** - [suresh-datt-joshi](https://github.com/suresh-datt-joshi)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
