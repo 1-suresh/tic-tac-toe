@@ -4,32 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <!-- NEW: Container for top-right controls -->
+    <div class="top-right-controls">
+        <button id="mute-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-volume-on"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-volume-off hide"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+        <button id="theme-switcher">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-moon hide"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+
+    <!-- Loader for initial page load -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Message container for win/draw -->
     <div class="msg-container hide">
         <p id="msg">Winner</p>
-        <button id="new-btn">New Game</button>
-
+        <button id="new-btn">Play Again</button>
     </div>
-    <main>
+
+    <!-- Game mode selection screen -->
+    <div class="selection-screen hide">
+        <h2>Choose Your Mode</h2>
+        <div class="mode-buttons">
+            <button id="pvp-btn">Player vs Player</button>
+            <button id="pvc-btn">Player vs Computer</button>
+        </div>
+    </div>
+
+    <!-- Player name input screen -->
+    <div class="name-screen hide">
+        <h2>Enter Player Names</h2>
+        <form id="name-form">
+            <div class="input-group">
+                <label for="playerO">Player O</label>
+                <input type="text" id="playerO" name="playerO" maxlength="10" required>
+            </div>
+            <div class="input-group">
+                <label for="playerX">Player X</label>
+                <input type="text" id="playerX" name="playerX" maxlength="10" required>
+            </div>
+            <button type="submit" class="start-game-btn">Start Game</button>
+        </form>
+    </div>
+
+    <!-- Difficulty selection screen -->
+    <div class="difficulty-screen hide">
+        <h2>Choose Difficulty</h2>
+        <div class="mode-buttons">
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+    </div>
+
+    <main class="hide">
         <h1>Tic-Tac-Toe</h1>
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>    
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
-                <button class="box"></button>  
+        
+        <div class="status-container">
+            <div class="score">
+                <p id="player-o-label">Player O</p>
+                <p id="score-o">0</p>
+            </div>
+            <div id="turn-indicator">
+                <p>O's Turn</p>
+            </div>
+            <div class="score">
+                <p id="player-x-label">Player X</p>
+                <p id="score-x">0</p>
             </div>
         </div>
-        <button id="reset-btn">Reset Game</button>
-        
+
+        <div class="container">
+            <div class="game">
+                <button class="box"></button><button class="box"></button><button class="box"></button>
+                <button class="box"></button><button class="box"></button><button class="box"></button>
+                <button class="box"></button><button class="box"></button><button class="box"></button>
+            </div>
+        </div>
+        <button id="reset-btn">Main Menu</button>
     </main>
+
+    <!-- External Audio Files -->
+    <audio id="click-sound" src="audio\click.wav" preload="auto"></audio>
+    <audio id="win-sound" src="audio\win1.mp3" preload="auto"></audio>
+    <audio id="draw-sound" src="audio\draw.wav" preload="auto"></audio>
+
     <script src="app.js"></script>
 </body>
 </html>
