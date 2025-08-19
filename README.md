@@ -25,10 +25,10 @@ A classic Tic-Tac-Toe game built with modern features using HTML, CSS, and vanil
 </details>
 
 ---
-
 ## 🚀 Live Demo
 
-**[View the live game here!](tic-tac-toe-game-steel-gamma.vercel.app)**
+**[View the live game here!](https://tic-tac-toe-game-steel-gamma.vercel.app/)**
+
 
 ---
 
